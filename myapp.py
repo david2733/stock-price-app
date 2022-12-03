@@ -18,6 +18,11 @@ ticker_data = yf.Ticker(ticker_symbol)
 ticker_df = ticker_data.history(period='id', start='2019-5-24', end='2022-9-31')
 # Open      High     Low Close    Volume    Dividends    Stack     splits
 
-
+st.write("""
+## Closing price
+""")
 st.line_chart(ticker_df.Close)
+st.write("""
+## Volume Price
+""")
 st.line_chart(ticker_df.Volume)
